@@ -14,7 +14,7 @@ func main() {
 
 	// GET method
 	mux.HandleFunc("/", func(writer http.ResponseWriter, request *http.Request) {
-		fmt.Fprint(writer, "hayo ngapain")
+		fmt.Fprint(writer, "test GET")
 	})
 
 	// POST method
