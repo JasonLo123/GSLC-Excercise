@@ -69,7 +69,7 @@ func postMethod() {
 	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
 	defer cancel()
 
-	req, err := http.NewRequestWithContext(ctx, "POST", "http://localhost:8080", bytes.NewBuffer(JsonData))
+	req, err := http.NewRequestWithContext(ctx, "POST", "http://localhost:8080/post", bytes.NewBuffer(JsonData))
 	handler.ErrorHandler(err)
 
 	req.Close = true
