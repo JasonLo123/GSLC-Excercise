@@ -33,10 +33,10 @@ func main() {
 	})
 
 	server := http.Server{
-		Addr:    ":9001",
+		Addr:    ":8080",
 		Handler: mux,
 	}
 
-	err := server.ListenAndServe()
+	err := server.ListenAndServeTLS("../cert.pem", "../key.pem")
 	handler.ErrorHandler(err)
 }
