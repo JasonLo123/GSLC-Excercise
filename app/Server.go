@@ -37,6 +37,6 @@ func main() {
 		Handler: mux,
 	}
 
-	err := server.ListenAndServe()
+	err := server.ListenAndServeTLS("../cert.pem", "../key.pem")
 	handler.ErrorHandler(err)
 }
