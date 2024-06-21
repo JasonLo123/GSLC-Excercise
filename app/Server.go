@@ -33,7 +33,7 @@ func main() {
 	})
 
 	server := http.Server{
-		Addr:    "9001",
+		Addr:    ":9001",
 		Handler: mux,
 	}
 
