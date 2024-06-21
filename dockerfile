@@ -5,9 +5,8 @@ WORKDIR /test
 
 RUN git clone https://github.com/JasonLo123/GSLC-Excercise.git
 
-WORKDIR /test/GSLC-Excercise
+WORKDIR /test/GSLC-Excercise/app
 
-ENV PORT=8080
 EXPOSE 8080
 
-RUN go run Server.go
+CMD [ "go" "run" "Server.go"]
